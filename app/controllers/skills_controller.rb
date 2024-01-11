@@ -3,17 +3,9 @@ class SkillsController < ApplicationController
   
     def index
       @skills = Skill.all
-      render json: {
-        message: "Habilidades carregadas com sucesso!",
-        skills: @skills
-      }
     end
   
-    def show
-      render json: {
-        message: 'Habilidade carregada com sucesso!',
-        skills: @skill
-      }
+    def show 
     end
   
     def new
