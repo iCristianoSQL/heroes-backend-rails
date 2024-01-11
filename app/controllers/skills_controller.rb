@@ -8,11 +8,6 @@ class SkillsController < ApplicationController
     def show 
     end
   
-    def new
-      @skill = Skill.new
-      render json: @skill
-    end
-  
     def create
       @skill = Skill.new(skill_params)
   
@@ -21,10 +16,6 @@ class SkillsController < ApplicationController
       else
         render json: @skill.errors, status: :unprocessable_entity
       end
-    end
-  
-    def edit
-      render json: @skill
     end
   
     def update

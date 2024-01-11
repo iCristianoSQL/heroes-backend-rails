@@ -16,11 +16,6 @@ class TeamsController < ApplicationController
       }
     end
   
-    def new
-      @team = Team.new
-      render json: @team
-    end
-  
     def create
       @team = Team.new(team_params)
   
@@ -29,10 +24,6 @@ class TeamsController < ApplicationController
       else
         render json: @team.errors, status: :unprocessable_entity
       end
-    end
-  
-    def edit
-      render json: @team
     end
   
     def update
